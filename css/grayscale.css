@@ -345,6 +345,14 @@ footer {
 }
 
 footer p {
+    font-size: 9px;
+    color: #282828;
+    margin: 0;
+}
+
+footer a {
+    font-size: 9px;
+    color: #282828;
     margin: 0;
 }
 
