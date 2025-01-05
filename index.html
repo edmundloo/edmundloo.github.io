@@ -1,186 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Edmund Loo's Personal Site" />
-    <meta name="author" content="Edmund Loo" />
+<head>
+  <!-- Character encoding and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Edmund Loo - Founder & Engineer</title>
+  <meta name="title" content="Edmund Loo - Founder & Engineer">
+  <meta name="description" content="San Francisco-based founder and engineer. Previously founding engineer at CZI & Neeva, early engineer at Plaid. Angel investor in standout startups.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edmundloo.com/">
+  <meta property="og:title" content="Edmund Loo - Founder & Engineer">
+  <meta property="og:description" content="San Francisco-based founder and engineer. Previously founding engineer at CZI & Neeva, early engineer at Plaid. Angel investor in standout startups.">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://edmundloo.com/">
+  <meta property="twitter:title" content="Edmund Loo - Founder & Engineer">
+  <meta property="twitter:description" content="San Francisco-based founder and engineer. Previously founding engineer at CZI & Neeva, early engineer at Plaid. Angel investor in standout startups.">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Edmund Loo</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    /* CSS Custom Properties - Theme Colors */
+    :root {
+      /* Solarized Light Colors */
+      --sl-color-white: #657b83;
+      --sl-color-bg: #fdf6e3;
+      --sl-color-border: #657b83;
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      /* Layout Variables */
+      --sl-text-2xl: 2rem;
+      --padding: 3rem;
+      --vertical-padding: 2rem;
+      
+      /* Animation Variables */
+      --transition-speed: 0.3s;
+    }
 
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet" />
+    /* Dark Mode Theme */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --sl-color-white: #93a1a1;
+        --sl-color-bg: #002b36;
+        --sl-color-border: #93a1a1;
+      }
+    }
 
-    <!-- Custom Fonts -->
-    <link
-      href="font-awesome/css/font-awesome.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
+    /* Base Styles */
+    body {
+      font-family: 'IBM Plex Mono', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--sl-color-bg);
+      color: var(--sl-color-white);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+    /* Main Container */
+    .hero {
+      margin: 1rem;
+      border: 2px solid var(--sl-color-border);
+      max-width: 800px;
+      width: calc(100% - 2rem);
+      transition: border-color var(--transition-speed) ease;
+    }
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navba-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-main-collapse"
-          >
-            <i class="fa fa-bars"></i>
-          </button>
-          <a class="navbar-brand page-scroll" href="#page-top">Edmund Loo</a>
-        </div>
+    /* Responsive adjustments for small screens */
+    @media (max-width: 30rem) {
+      .hero {
+        margin: 0.5rem;
+        --vertical-padding: 1rem;
+      }
+    }
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav">
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="hidden">
-              <a href="#page-top"></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#about">About</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#contact">Contact</a>
-            </li>
-            <li>
-              <a
-                class="page-scroll"
-                target="_blank"
-                href="./files/Edmund_Loo_Resume.pdf"
-                >Resume</a
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+    /* Header Section */
+    section.top {
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    section.top h1 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      font-weight: normal;
+    }
+
+    /* Content Section */
+    section.content {
+      border-top: 2px solid var(--sl-color-border);
+      padding: var(--padding);
+    }
+
+    section.content p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    section.content p + p {
+      margin-top: var(--vertical-padding);
+    }
+
+    section.content b {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Footer Section */
+    section.footer {
+      border-top: 2px solid var(--sl-color-border);
+      display: flex;
+      flex-direction: row;
+    }
+
+    section.footer > div {
+      flex: 1;
+      text-align: center;
+      text-transform: uppercase;
+      padding: calc(var(--padding) / 2) 0.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    section.footer > div + div {
+      border-left: 2px solid var(--sl-color-border);
+    }
+
+    /* Link Styles */
+    a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: normal;
+      transition: opacity var(--transition-speed) ease;
+    }
+
+    a:hover, a:focus {
+      opacity: 0.7;
+      outline: none;
+    }
+
+    /* Focus styles for accessibility */
+    a:focus-visible {
+      outline: 2px solid var(--sl-color-white);
+      outline-offset: 2px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 640px) {
+      :root {
+        --padding: 2rem;
+      }
+      
+      section.top h1 {
+        font-size: 1.25rem;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+      
+      .hero {
+        border-color: black;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <section class="top">
+      <div class="logo" role="banner">
+        Edmund Loo 
       </div>
-      <!-- /.container -->
-    </nav>
-
-    <!-- Intro Header -->
-    <header class="intro">
-      <div class="intro-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <p class="intro-text">
-                Snowboarder. Photographer. Engineer.
-              </p>
-              <h1 class="brand-heading">Edmund Loo</h1>
-              <a href="#about" class="btn btn-circle page-scroll">
-                <i class="fa fa-angle-double-down animated"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h2>Hello!</h2>
-          <p>
-            You can find some of my previous work on my resume, but in a nutshell, I've had the opportunity to help build companies like Plaid, the Chan Zuckerberg Initiative, Neeva, and more. I'm an engineer and entrepreneur, and I love tackling high-impact problems and spaces. Outside of work, I am a huge bird lover, a big fan of the outdoors, and I enjoy taking photos.
-          </p>
-          <p>
-            I'm almost always open to chatting or grabbing a tea! Check out my contact information below if you think I'm someone you would like to talk to.
-          </p>
-        </div>
-      </div>
+      <h1>Founder & Engineer</h1>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h2>Contact Me</h2>
-          <p>
-            Long lost twin brother? Looking to learn more? Just want to say
-            hi?<br />Get in touch and send me an email!
-          </p>
-          <p><a href="mailto:hello@edmundloo.com">hello@edmundloo.com</a></p>
-          <ul class="list-inline banner-social-buttons">
-            <li>
-              <a
-                target="_blank"
-                href="./files/Edmund_Loo_Resume.pdf"
-                class="btn btn-default btn-lg"
-                ><i class="fa fa-paperclip fa-fw"></i>
-                <span class="network-name">Resume</span></a
-              >
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://linkedin.com/in/edmundloo"
-                class="btn btn-default btn-lg"
-                ><i class="fa fa-linkedin fa-fw"></i>
-                <span class="network-name">LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://angel.co/edmundloo"
-                class="btn btn-default btn-lg"
-                ><i class="fa fa-angellist fa-fw"></i>
-                <span class="network-name">AngelList</span>
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://www.flickr.com/people/edmundloo/"
-                class="btn btn-default btn-lg"
-                ><i class="fa fa-flickr fa-fw"></i>
-                <span class="network-name">Flickr</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <section class="content">
+      <p>I'm based in San Francisco, and I'm currently working on something new.</p>
+      <p>Most recently, I was a venture-backed founder. Before that, I was a founding engineer at <a href="https://chanzuckerberg.com/" target="_blank" rel="noopener noreferrer">CZI</a> & <a href="https://en.wikipedia.org/wiki/Neeva" target="_blank" rel="noopener noreferrer">Neeva</a> (exit to <a href="https://www.snowflake.com/" target="_blank" rel="noopener noreferrer">Snowflake</a>) and an early engineer at <a href="https://plaid.com/" target="_blank" rel="noopener noreferrer">Plaid</a>.</p>
+      <p>I hold a B.S. in Computer Science and Engineering from UCI, with separate ABET accreditations in both Computer Science and Computer Engineering.</p>
+      <p>I'm keen on investing in standout startups and founders, like: <a href="https://www.artemis.xyz/" target="_blank" rel="noopener noreferrer">Artemis</a>, <a href="https://clear.co/" target="_blank" rel="noopener noreferrer">Clearco</a>, <a href="https://fragment.dev/" target="_blank" rel="noopener noreferrer">Fragment</a>, <a href="https://www.parafin.com/" target="_blank" rel="noopener noreferrer">Parafin</a>, <a href="https://pipe.com/" target="_blank" rel="noopener noreferrer">Pipe</a>, <a href="https://stytch.com/" target="_blank" rel="noopener noreferrer">Stytch</a>, among others.</p>
     </section>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-  </body>
-</html>
+    <section class="footer">
+      <div class="col1">
+        <a href="./Edmund_Loo_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+      </div>
+      <div class="col2">
+        <a href="https://www.linkedin.com/in/edmundloo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+      <div class="col3">
+        <a href="https://www.flickr.com/people/edmundloo/" target="_blank" rel="noopener noreferrer">Flickr</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 
