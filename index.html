@@ -12,7 +12,7 @@
     <meta name="description" content="Founder and engineering leader with deep technical expertise. Founding engineer at CZI and Neeva, early engineer at Plaid. Leading high-impact teams while selectively investing in exceptional startups.">
     <meta name="author" content="Edmund Loo">
     <meta name="keywords" content="Edmund Loo, Software Engineer, Founder, San Francisco, CZI, Neeva, Plaid, Angel Investor, Engineering Leader, Tech Startup, Chan Zuckerberg Initiative, Snowflake, Silicon Valley, Startup Founder, Technical Founder, Software Architecture, Full Stack Engineer, Technology Investor, UC Irvine, Computer Science, Computer Engineering, Bay Area Tech, Enterprise Software, Early Stage Startups, Venture Capital">
-    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="generator" content="Manual">
@@ -32,7 +32,9 @@
     <!-- Security -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=(), accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -258,23 +260,43 @@
           align-items: flex-start;
         }
 
-        section.top,
-        section.content {
+        section.content,
+        section.top h1,
+        .logo span[itemprop="name"] {
           display: none;
         }
 
-        section.footer {
-          border-top: none;
+        .hero {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 100px;
+        }
+
+        section.top {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          flex: 1;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+          margin: 0;
+          text-align: center;
+        }
+
+        .logo::before {
+          content: "E.L.";
+          font-weight: bold;
         }
       }
 
       /* Show only initials at very narrow widths */
       @media (max-width: 100px) {
         body {
-          min-height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          align-items: flex-start;
         }
 
         .hero {
