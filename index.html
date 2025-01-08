@@ -1,241 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Character encoding and viewport -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>Edmund Loo - Founder & Engineer</title>
-  <meta name="title" content="Edmund Loo - Founder & Engineer">
-  <meta name="description" content="San Francisco-based founder and engineer. Previously founding engineer at CZI & Neeva, early engineer at Plaid. Angel investor in standout startups.">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://edmundloo.com/">
-  <meta property="og:title" content="Edmund Loo - Founder & Engineer">
-  <meta property="og:description" content="San Francisco-based founder and engineer. Previously founding engineer at CZI & Neeva, early engineer at Plaid. Angel investor in standout startups.">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary">
-  <meta property="twitter:url" content="https://edmundloo.com/">
-  <meta property="twitter:title" content="Edmund Loo - Founder & Engineer">
-  <meta property="twitter:description" content="San Francisco-based founder and engineer. Previously founding engineer at CZI & Neeva, early engineer at Plaid. Angel investor in standout startups.">
-  
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  
-  <!-- Preload critical resources -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* CSS Custom Properties - Theme Colors */
-    :root {
-      /* Solarized Light Colors */
-      --sl-color-white: #657b83;
-      --sl-color-bg: #fdf6e3;
-      --sl-color-border: #657b83;
-
-      /* Layout Variables */
-      --sl-text-2xl: 2rem;
-      --padding: 3rem;
-      --vertical-padding: 2rem;
-      
-      /* Animation Variables */
-      --transition-speed: 0.3s;
-    }
-
-    /* Dark Mode Theme */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --sl-color-white: #93a1a1;
-        --sl-color-bg: #002b36;
-        --sl-color-border: #93a1a1;
+  <head>
+    <!-- Character encoding and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor</title>
+    <meta name="title" content="Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor">
+    <meta name="description" content="Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.">
+    <meta name="author" content="Edmund Loo">
+    <meta name="keywords" content="Edmund Loo, Tech Innovator, Startup Founder, Angel Investor, San Francisco Tech, CZI, Neeva, Plaid, Engineering Leader, Tech Startup">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="apple-mobile-web-app-title" content="Edmund Loo">
+    <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="https://edmundloo.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edmundloo.com/">
+    <meta property="og:title" content="Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor">
+    <meta property="og:description" content="Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.">
+    <meta property="og:site_name" content="Edmund Loo">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://edmundloo.com/">
+    <meta property="twitter:title" content="Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor">
+    <meta property="twitter:description" content="Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Edmund Loo",
+        "url": "https://edmundloo.com",
+        "jobTitle": "Tech Founder & Investor",
+        "description": "Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of California, Irvine"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/edmundloo/",
+          "https://www.flickr.com/people/edmundloo/"
+        ]
       }
-    }
+    </script>
 
-    /* Base Styles */
-    body {
-      font-family: 'IBM Plex Mono', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--sl-color-bg);
-      color: var(--sl-color-white);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    /* Main Container */
-    .hero {
-      margin: 1rem;
-      border: 2px solid var(--sl-color-border);
-      max-width: 800px;
-      width: calc(100% - 2rem);
-      transition: border-color var(--transition-speed) ease;
-    }
+    <style>
+      /* CSS Custom Properties - Theme Colors */
+      :root {
+        /* Solarized Light Colors */
+        --sl-color-white: #657b83;
+        --sl-color-bg: #fdf6e3;
+        --sl-color-border: #657b83;
 
-    /* Responsive adjustments for small screens */
-    @media (max-width: 30rem) {
+        /* Layout Variables */
+        --sl-text-2xl: 2rem;
+        --padding: 3rem;
+        --vertical-padding: 2rem;
+        
+        /* Animation Variables */
+        --transition-speed: 0.3s;
+      }
+
+      /* Dark Mode Theme */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --sl-color-white: #93a1a1;
+          --sl-color-bg: #002b36;
+          --sl-color-border: #93a1a1;
+        }
+      }
+
+      /* Base Styles */
+      body {
+        font-family: 'IBM Plex Mono', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                     Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--sl-color-bg);
+        color: var(--sl-color-white);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color var(--transition-speed) ease,
+                    color var(--transition-speed) ease;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Main Container */
       .hero {
-        margin: 0.5rem;
-        --vertical-padding: 1rem;
+        margin: 1rem;
+        border: 2px solid var(--sl-color-border);
+        max-width: 800px;
+        width: calc(100% - 2rem);
+        transition: border-color var(--transition-speed) ease;
       }
-    }
 
-    /* Header Section */
-    section.top {
-      padding: 2rem;
-      text-align: left;
-    }
-
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    section.top h1 {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.25;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      font-weight: normal;
-    }
-
-    /* Content Section */
-    section.content {
-      border-top: 2px solid var(--sl-color-border);
-      padding: var(--padding);
-    }
-
-    section.content p {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    section.content p + p {
-      margin-top: var(--vertical-padding);
-    }
-
-    section.content b {
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* Footer Section */
-    section.footer {
-      border-top: 2px solid var(--sl-color-border);
-      display: flex;
-      flex-direction: row;
-    }
-
-    section.footer > div {
-      flex: 1;
-      text-align: center;
-      text-transform: uppercase;
-      padding: calc(var(--padding) / 2) 0.5rem;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-    }
-
-    section.footer > div + div {
-      border-left: 2px solid var(--sl-color-border);
-    }
-
-    /* Link Styles */
-    a {
-      color: inherit;
-      text-decoration: underline;
-      font-weight: normal;
-      transition: opacity var(--transition-speed) ease;
-    }
-
-    a:hover, a:focus {
-      opacity: 0.7;
-      outline: none;
-    }
-
-    /* Focus styles for accessibility */
-    a:focus-visible {
-      outline: 2px solid var(--sl-color-white);
-      outline-offset: 2px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 640px) {
-      :root {
-        --padding: 2rem;
+      /* Responsive adjustments for small screens */
+      @media (max-width: 30rem) {
+        .hero {
+          margin: 0.5rem;
+          --vertical-padding: 1rem;
+        }
       }
-      
-      section.top h1 {
-        font-size: 1.25rem;
+
+      /* Header Section */
+      section.top {
+        padding: 2rem;
+        text-align: left;
       }
 
       .logo {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
       }
-    }
 
-    /* Print styles */
-    @media print {
-      body {
-        background: white;
-        color: black;
+      section.top h1 {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.25;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        font-weight: normal;
       }
-      
-      .hero {
-        border-color: black;
+
+      /* Content Section */
+      section.content {
+        border-top: 2px solid var(--sl-color-border);
+        padding: var(--padding);
       }
-      
+
+      section.content p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      section.content p + p {
+        margin-top: var(--vertical-padding);
+      }
+
+      section.content b {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* Footer Section */
+      section.footer {
+        border-top: 2px solid var(--sl-color-border);
+        display: flex;
+        flex-direction: row;
+      }
+
+      section.footer > div {
+        flex: 1;
+        text-align: center;
+        text-transform: uppercase;
+        padding: calc(var(--padding) / 2) 0.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+      }
+
+      section.footer > div + div {
+        border-left: 2px solid var(--sl-color-border);
+      }
+
+      /* Link Styles */
       a {
-        text-decoration: none;
+        color: inherit;
+        text-decoration: underline;
+        font-weight: normal;
+        transition: opacity var(--transition-speed) ease;
       }
-    }
-  </style>
-</head>
-<body>
-  <main class="hero">
-    <section class="top">
-      <div class="logo" role="banner">
-        Edmund Loo 
-      </div>
-      <h1>Founder & Engineer</h1>
-    </section>
 
-    <section class="content">
-      <p>I'm based in San Francisco, and I'm currently working on something new.</p>
-      <p>Most recently, I was a venture-backed founder. Before that, I was a founding engineer at <a href="https://chanzuckerberg.com/" target="_blank" rel="noopener noreferrer">CZI</a> & <a href="https://en.wikipedia.org/wiki/Neeva" target="_blank" rel="noopener noreferrer">Neeva</a> (exit to <a href="https://www.snowflake.com/" target="_blank" rel="noopener noreferrer">Snowflake</a>) and an early engineer at <a href="https://plaid.com/" target="_blank" rel="noopener noreferrer">Plaid</a>.</p>
-      <p>I hold a B.S. in Computer Science and Engineering from UCI, with separate ABET accreditations in both Computer Science and Computer Engineering.</p>
-      <p>I'm keen on investing in standout startups and founders, like: <a href="https://www.artemis.xyz/" target="_blank" rel="noopener noreferrer">Artemis</a>, <a href="https://clear.co/" target="_blank" rel="noopener noreferrer">Clearco</a>, <a href="https://fragment.dev/" target="_blank" rel="noopener noreferrer">Fragment</a>, <a href="https://www.parafin.com/" target="_blank" rel="noopener noreferrer">Parafin</a>, <a href="https://pipe.com/" target="_blank" rel="noopener noreferrer">Pipe</a>, <a href="https://stytch.com/" target="_blank" rel="noopener noreferrer">Stytch</a>, among others.</p>
-    </section>
+      a:hover,
+      a:focus {
+        opacity: 0.7;
+        outline: none;
+      }
 
-    <section class="footer">
-      <div class="col1">
-        <a href="./Edmund_Loo_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
-      </div>
-      <div class="col2">
-        <a href="https://www.linkedin.com/in/edmundloo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-      <div class="col3">
-        <a href="https://www.flickr.com/people/edmundloo/" target="_blank" rel="noopener noreferrer">Flickr</a>
-      </div>
-    </section>
-  </main>
-</body>
+      /* Focus styles for accessibility */
+      a:focus-visible {
+        outline: 2px solid var(--sl-color-white);
+        outline-offset: 2px;
+      }
+
+      /* Print styles */
+      @media print {
+        body {
+          background: white;
+          color: black;
+        }
+        
+        .hero {
+          border-color: black;
+        }
+        
+        a {
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="hero">
+      <section class="top">
+        <div class="logo" role="banner">
+          Edmund Loo
+        </div>
+        <h1>Founder & Engineer</h1>
+      </section>
+
+      <section class="content">
+        <p>I'm based in San Francisco, and I'm currently working on something new.</p>
+        <p>Most recently, I was a venture-backed founder. Before that, I was a founding engineer at 
+          <a href="https://chanzuckerberg.com/" target="_blank" rel="noopener noreferrer">CZI</a> & 
+          <a href="https://en.wikipedia.org/wiki/Neeva" target="_blank" rel="noopener noreferrer">Neeva</a> 
+          (exit to <a href="https://www.snowflake.com/" target="_blank" rel="noopener noreferrer">Snowflake</a>) 
+          and an early engineer at <a href="https://plaid.com/" target="_blank" rel="noopener noreferrer">Plaid</a>.</p>
+        <p>I hold a B.S. in Computer Science and Engineering from UCI, with separate ABET accreditations 
+          in both Computer Science and Computer Engineering.</p>
+        <p>I'm keen on investing in standout startups and founders, like: 
+          <a href="https://www.artemis.xyz/" target="_blank" rel="noopener noreferrer">Artemis</a>, 
+          <a href="https://clear.co/" target="_blank" rel="noopener noreferrer">Clearco</a>, 
+          <a href="https://fragment.dev/" target="_blank" rel="noopener noreferrer">Fragment</a>, 
+          <a href="https://www.parafin.com/" target="_blank" rel="noopener noreferrer">Parafin</a>, 
+          <a href="https://pipe.com/" target="_blank" rel="noopener noreferrer">Pipe</a>, 
+          <a href="https://stytch.com/" target="_blank" rel="noopener noreferrer">Stytch</a>, 
+          among others.</p>
+      </section>
+
+      <section class="footer">
+        <div class="col1">
+          <a href="./Edmund_Loo_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
+        </div>
+        <div class="col2">
+          <a href="https://www.linkedin.com/in/edmundloo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div class="col3">
+          <a href="https://www.flickr.com/people/edmundloo/" target="_blank" rel="noopener noreferrer">Flickr</a>
+        </div>
+      </section>
+    </main>
+  </body>
 </html> 
