@@ -3,35 +3,50 @@
   <head>
     <!-- Character encoding and viewport -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Primary Meta Tags -->
-    <title>Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor</title>
-    <meta name="title" content="Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor">
-    <meta name="description" content="Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.">
+    <title>Edmund Loo | Founder & Engineer</title>
+    <meta name="title" content="Edmund Loo | Founder & Engineer">
+    <meta name="description" content="Founder and engineering leader with deep technical expertise. Founding engineer at CZI and Neeva, early engineer at Plaid. Leading high-impact teams while selectively investing in exceptional startups.">
     <meta name="author" content="Edmund Loo">
-    <meta name="keywords" content="Edmund Loo, Tech Innovator, Startup Founder, Angel Investor, San Francisco Tech, CZI, Neeva, Plaid, Engineering Leader, Tech Startup">
-    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Edmund Loo, Software Engineer, Founder, San Francisco, CZI, Neeva, Plaid, Angel Investor, Engineering Leader, Tech Startup, Chan Zuckerberg Initiative, Snowflake, Silicon Valley, Startup Founder, Technical Founder, Software Architecture, Full Stack Engineer, Technology Investor, UC Irvine, Computer Science, Computer Engineering, Bay Area Tech, Enterprise Software, Early Stage Startups, Venture Capital">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
+    <meta name="generator" content="Manual">
+    
+    <!-- Mobile Meta Tags -->
     <meta name="apple-mobile-web-app-title" content="Edmund Loo">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#fdf6e3" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#002b36" media="(prefers-color-scheme: dark)">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://edmundloo.com/">
+    
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://edmundloo.com/">
-    <meta property="og:title" content="Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor">
-    <meta property="og:description" content="Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.">
+    <meta property="og:title" content="Edmund Loo | Founder & Engineer">
+    <meta property="og:description" content="Founder and engineering leader with deep technical expertise. Founding engineer at CZI and Neeva, early engineer at Plaid. Leading high-impact teams while selectively investing in exceptional startups.">
     <meta property="og:site_name" content="Edmund Loo">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="https://edmundloo.com/">
-    <meta property="twitter:title" content="Edmund Loo | Building the Future of Tech | SF-Based Founder & Investor">
-    <meta property="twitter:description" content="Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://edmundloo.com/">
+    <meta name="twitter:title" content="Edmund Loo | Founder & Engineer">
+    <meta name="twitter:description" content="Founder and engineering leader with deep technical expertise. Founding engineer at CZI and Neeva, early engineer at Plaid. Leading high-impact teams while selectively investing in exceptional startups.">
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -40,8 +55,8 @@
         "@type": "Person",
         "name": "Edmund Loo",
         "url": "https://edmundloo.com",
-        "jobTitle": "Tech Founder & Investor",
-        "description": "Tech innovator with a track record of building groundbreaking products at CZI, Neeva, and Plaid. Now backing the next generation of transformative startups while crafting something new in San Francisco.",
+        "jobTitle": "Founder & Engineer",
+        "description": "Founder and engineering leader with deep technical expertise. Founding engineer at CZI and Neeva, early engineer at Plaid. Leading high-impact teams while selectively investing in exceptional startups.",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
           "name": "University of California, Irvine"
@@ -49,6 +64,19 @@
         "sameAs": [
           "https://www.linkedin.com/in/edmundloo/",
           "https://www.flickr.com/people/edmundloo/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "San Francisco",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "knowsAbout": [
+          "Software Engineering",
+          "Engineering Leadership",
+          "Startup Founding",
+          "Angel Investment",
+          "Technical Architecture"
         ]
       }
     </script>
@@ -66,19 +94,24 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-      /* CSS Custom Properties - Theme Colors */
+      /* CSS Custom Properties
+      -------------------------------------------------- */
       :root {
-        /* Solarized Light Colors */
+        /* Colors - Solarized Light Theme */
         --sl-color-white: #657b83;
         --sl-color-bg: #fdf6e3;
         --sl-color-border: #657b83;
 
-        /* Layout Variables */
+        /* Typography */
+        --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
         --sl-text-2xl: 2rem;
+
+        /* Layout */
         --padding: 3rem;
         --vertical-padding: 2rem;
         
-        /* Animation Variables */
+        /* Animation */
         --transition-speed: 0.3s;
       }
 
@@ -91,39 +124,47 @@
         }
       }
 
-      /* Base Styles */
+      /* Reset & Base Styles
+      -------------------------------------------------- */
+      html {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+        height: 100%;
+      }
+
+      *, *::before, *::after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
-        font-family: 'IBM Plex Mono', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-                     Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+        font-family: var(--font-mono), var(--font-sans);
         margin: 0;
         padding: 0;
         background-color: var(--sl-color-bg);
         color: var(--sl-color-white);
-        min-height: 100vh;
+        min-height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: background-color var(--transition-speed) ease,
-                    color var(--transition-speed) ease;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        overflow-y: auto;
       }
 
+      /* Layout Components
+      -------------------------------------------------- */
       /* Main Container */
       .hero {
-        margin: 1rem;
         border: 2px solid var(--sl-color-border);
         max-width: 800px;
         width: calc(100% - 2rem);
+        margin: 1rem;
         transition: border-color var(--transition-speed) ease;
-      }
-
-      /* Responsive adjustments for small screens */
-      @media (max-width: 30rem) {
-        .hero {
-          margin: 0.5rem;
-          --vertical-padding: 1rem;
-        }
+        background-color: var(--sl-color-bg);
       }
 
       /* Header Section */
@@ -153,7 +194,7 @@
       /* Content Section */
       section.content {
         border-top: 2px solid var(--sl-color-border);
-        padding: var(--padding);
+        padding: 2rem;
       }
 
       section.content p {
@@ -191,12 +232,15 @@
         border-left: 2px solid var(--sl-color-border);
       }
 
+      /* Interactive Elements
+      -------------------------------------------------- */
       /* Link Styles */
       a {
         color: inherit;
         text-decoration: underline;
         font-weight: normal;
         transition: opacity var(--transition-speed) ease;
+        touch-action: manipulation;
       }
 
       a:hover,
@@ -211,7 +255,33 @@
         outline-offset: 2px;
       }
 
-      /* Print styles */
+      /* Modern Viewport Support
+      -------------------------------------------------- */
+      @supports (height: 100dvh) {
+        body {
+          min-height: 100dvh;
+        }
+      }
+
+      /* Responsive Design
+      -------------------------------------------------- */
+      /* Switch to top alignment only when content exceeds viewport */
+      @media screen and (max-height: 550px) {
+        body {
+          align-items: flex-start;
+        }
+      }
+
+      /* Additional margin adjustments for narrow screens */
+      @media (max-width: 30rem) {
+        .hero {
+          width: calc(100% - 1rem);
+          margin: 0.5rem;
+        }
+      }
+
+      /* Print Styles
+      -------------------------------------------------- */
       @media print {
         body {
           background: white;
@@ -220,31 +290,54 @@
         
         .hero {
           border-color: black;
+          box-shadow: none;
         }
         
         a {
           text-decoration: none;
         }
+
+        @page {
+          margin: 2cm;
+        }
+      }
+
+      /* Accessibility & Performance
+      -------------------------------------------------- */
+      /* Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
       }
     </style>
   </head>
   <body>
-    <main class="hero">
+    <main class="hero" itemscope itemtype="https://schema.org/Person">
       <section class="top">
         <div class="logo" role="banner">
-          Edmund Loo
+          <span itemprop="name">Edmund Loo</span>
         </div>
-        <h1>Founder & Engineer</h1>
+        <h1 itemprop="jobTitle">Founder & Engineer</h1>
       </section>
 
       <section class="content">
-        <p>I'm based in San Francisco, and I'm currently working on something new.</p>
+        <p itemprop="homeLocation">I'm based in San Francisco, and I'm currently working on something new.</p>
         <p>Most recently, I was a venture-backed founder. Before that, I was a founding engineer at 
-          <a href="https://chanzuckerberg.com/" target="_blank" rel="noopener noreferrer">CZI</a> & 
+          <a href="https://chanzuckerberg.com/" target="_blank" rel="noopener noreferrer" itemprop="worksFor">CZI</a> & 
           <a href="https://en.wikipedia.org/wiki/Neeva" target="_blank" rel="noopener noreferrer">Neeva</a> 
           (exit to <a href="https://www.snowflake.com/" target="_blank" rel="noopener noreferrer">Snowflake</a>) 
           and an early engineer at <a href="https://plaid.com/" target="_blank" rel="noopener noreferrer">Plaid</a>.</p>
-        <p>I hold a B.S. in Computer Science and Engineering from UCI, with separate ABET accreditations 
+        <p itemprop="hasCredential">I hold a B.S. in Computer Science and Engineering from UCI, with separate ABET accreditations 
           in both Computer Science and Computer Engineering.</p>
         <p>I'm keen on investing in standout startups and founders, like: 
           <a href="https://www.artemis.xyz/" target="_blank" rel="noopener noreferrer">Artemis</a>, 
@@ -261,10 +354,10 @@
           <a href="./Edmund_Loo_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a>
         </div>
         <div class="col2">
-          <a href="https://www.linkedin.com/in/edmundloo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/edmundloo/" target="_blank" rel="noopener noreferrer" itemprop="sameAs">LinkedIn</a>
         </div>
         <div class="col3">
-          <a href="https://www.flickr.com/people/edmundloo/" target="_blank" rel="noopener noreferrer">Flickr</a>
+          <a href="https://www.flickr.com/people/edmundloo/" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Flickr</a>
         </div>
       </section>
     </main>
