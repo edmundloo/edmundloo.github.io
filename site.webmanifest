@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Edmund Loo",
+  "short_name": "E.L.",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -13,9 +13,44 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#fdf6e3",
+  "background_color": "#fdf6e3",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "start_url": "/",
+  "scope": "/",
+  "id": "edmundloo-personal-website",
+  "description": "Edmund Loo | Founder & Engineer",
+  "orientation": "any",
+  "categories": ["business", "technology"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Resume",
+      "url": "/Edmund_Loo_Resume.pdf",
+      "description": "View Edmund's Resume"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Edmund Loo's Website"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }
