@@ -71,8 +71,7 @@
           "name": "University of California, Irvine"
         },
         "sameAs": [
-          "https://www.linkedin.com/in/edmundloo/",
-          "https://www.flickr.com/people/edmundloo/"
+          "https://x.com/edmundloo_"
         ],
         "address": {
           "@type": "PostalAddress",
@@ -249,13 +248,12 @@
     .education-link,
     .investment-link,
     .footer-link-resume,
-    .footer-link-linkedin,
-    .footer-link-flickr {
-      color: var(--sl-color-blue);
-      text-decoration: none;
-      border-bottom: 1px solid var(--sl-color-blue);
-      padding-bottom: 1px;
-      transition: border-color var(--transition-speed) ease,
+    .footer-link-x {
+      text-decoration: underline;
+      text-decoration-color: var(--sl-color-blue);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: text-decoration-color var(--transition-speed) ease,
         color var(--transition-speed) ease;
     }
 
@@ -267,12 +265,10 @@
     .investment-link:focus,
     .footer-link-resume:hover,
     .footer-link-resume:focus,
-    .footer-link-linkedin:hover,
-    .footer-link-linkedin:focus,
-    .footer-link-flickr:hover,
-    .footer-link-flickr:focus {
+    .footer-link-x:hover,
+    .footer-link-x:focus {
       color: var(--sl-color-green);
-      border-bottom: 1px solid transparent;
+      text-decoration-color: transparent;
     }
 
     /* Footer Section */
@@ -287,11 +283,15 @@
       flex: 1;
       text-align: center;
       text-transform: uppercase;
-      padding: calc(var(--padding) / 2) 0.5rem;
       font-size: 0.9rem;
       letter-spacing: 0.05em;
       min-width: 0;
       white-space: nowrap;
+    }
+
+    section.footer a {
+      display: block;
+      padding: calc(var(--padding) / 2) 0.5rem;
     }
 
     section.footer>div+div {
@@ -329,10 +329,9 @@
       .education-link,
       .investment-link,
       .footer-link-resume,
-      .footer-link-linkedin,
-      .footer-link-flickr {
+      .footer-link-x {
         color: var(--sl-color-green);
-        border-bottom-color: var(--sl-color-green);
+        text-decoration-color: var(--sl-color-green);
       }
 
       a:hover,
@@ -345,10 +344,8 @@
       .investment-link:focus,
       .footer-link-resume:hover,
       .footer-link-resume:focus,
-      .footer-link-linkedin:hover,
-      .footer-link-linkedin:focus,
-      .footer-link-flickr:hover,
-      .footer-link-flickr:focus {
+      .footer-link-x:hover,
+      .footer-link-x:focus {
         color: var(--sl-color-aqua);
       }
 
@@ -372,8 +369,11 @@
       }
 
       section.footer>div {
-        padding: 1rem 0.5rem;
         white-space: normal;
+      }
+
+      section.footer a {
+        padding: 1rem 0.5rem;
       }
 
       section.footer>div+div {
@@ -578,17 +578,13 @@
     </section>
 
     <section class="footer">
-      <div class="col1">
+      <div>
+        <a href="https://x.com/edmundloo_" target="_blank" rel="noopener noreferrer" itemprop="sameAs"
+          class="footer-link-x">X</a>
+      </div>
+      <div>
         <a href="./Edmund_Loo_Resume.pdf" target="_blank" rel="noopener noreferrer"
           class="footer-link-resume">Résumé</a>
-      </div>
-      <div class="col2">
-        <a href="https://www.linkedin.com/in/edmundloo/" target="_blank" rel="noopener noreferrer" itemprop="sameAs"
-          class="footer-link-linkedin">LinkedIn</a>
-      </div>
-      <div class="col3">
-        <a href="https://www.flickr.com/people/edmundloo/" target="_blank" rel="noopener noreferrer" itemprop="sameAs"
-          class="footer-link-flickr">Flickr</a>
       </div>
     </section>
   </main>
