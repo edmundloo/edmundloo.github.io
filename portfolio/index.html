@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <!-- Character encoding, viewport, and color scheme -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)" />
+
+  <!-- Primary Meta Tags -->
+  <title>Portfolio | Edmund Loo</title>
+  <link rel="canonical" href="https://edmundloo.com/portfolio/" />
+
+  <!-- Mobile Meta Tags -->
+  <meta name="apple-mobile-web-app-title" content="Edmund Loo" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Security -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="mask-icon" href="/favicon.svg" color="#21201c" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts: text= must list every character the page displays -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel&family=Inter&text=PORTFOLIO%20Artemis%20Clearco%20Fragment%20Parafin%20Pipe%20Robinhood%20SpaceX%20Stytch%20xAI&display=block"
+    rel="stylesheet" />
+
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <style>
+    /* Radix Sand: step 1 background, step 12 text, steps 7 and 8 link underlines */
+    :root {
+      --color-bg: #fdfdfc;
+      --color-text: #21201c;
+      --color-line: #cfceca;
+      --color-line-hover: #bcbbb5;
+      --font-serif: "Cinzel", serif;
+      --font-sans: "Inter", sans-serif;
+      --tracking: 0.3em;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #111110;
+        --color-text: #eeeeec;
+        --color-line: #494844;
+        --color-line-hover: #62605b;
+      }
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-serif);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 2rem;
+      /* Balances the letter-spacing after the last letter */
+      padding-left: var(--tracking);
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: var(--tracking);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      line-height: 2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-line: underline;
+      text-decoration-color: var(--color-line);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration-color: var(--color-line-hover);
+    }
+
+    a:focus-visible {
+      outline: 1px solid var(--color-line-hover);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>PORTFOLIO</h1>
+    <ul>
+      <li><a href="https://www.artemis.ai/" target="_blank" rel="noopener noreferrer">Artemis</a></li>
+      <li><a href="https://clear.co/" target="_blank" rel="noopener noreferrer">Clearco</a></li>
+      <li><a href="https://fragment.dev/" target="_blank" rel="noopener noreferrer">Fragment</a></li>
+      <li><a href="https://www.parafin.com/" target="_blank" rel="noopener noreferrer">Parafin</a></li>
+      <li><a href="https://pipe.com/" target="_blank" rel="noopener noreferrer">Pipe</a></li>
+      <li><a href="https://robinhood.com/" target="_blank" rel="noopener noreferrer">Robinhood</a></li>
+      <li><a href="https://www.spacex.com/" target="_blank" rel="noopener noreferrer">SpaceX</a></li>
+      <li><a href="https://stytch.com/" target="_blank" rel="noopener noreferrer">Stytch</a></li>
+      <li><a href="https://x.ai/" target="_blank" rel="noopener noreferrer">xAI</a></li>
+    </ul>
+  </main>
+</body>
+
+</html>
