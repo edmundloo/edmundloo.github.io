@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" translate="no">
 
 <head>
-  <!-- Character encoding, viewport, and color scheme -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lets Apple Watch use its real width, so the small-viewport tiers apply -->
+  <meta name="disabled-adaptations" content="watch" />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)" />
 
-  <!-- Primary Meta Tags -->
   <title>Edmund Loo</title>
   <link rel="canonical" href="https://edmundloo.com/" />
 
-  <!-- Security -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;" />
+    content="default-src 'self'; style-src 'unsafe-inline'; font-src data:; img-src 'self' data:;" />
 
   <!-- No icon: an empty data: URL stops browsers requesting /favicon.ico -->
   <link rel="icon" href="data:," />
 
-  <!-- Fonts: text= must list every character the page displays -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&text=AD%20MAIOREM%20DEI%20GLORIAM&display=block"
-    rel="stylesheet" />
-
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-
   <style>
+    /* Cinzel, Copyright The Cinzel Project Authors, SIL Open Font License 1.1; Google Fonts subset text=AD%C2%A0MAIOREM%20DEI%C2%A0GLORIAM */
+    @font-face {
+      font-family: "Cinzel";
+      font-display: block;
+      src: url(data:font/woff2;base64,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) format("woff2");
+    }
+
     /* Radix Sand: step 1 background, step 12 text */
     :root {
       --color-bg: #fdfdfc;
@@ -65,40 +63,30 @@
     h1 {
       margin: 0;
       /* The extra leading inset balances the letter-spacing after the last letter */
-      padding: 0 1rem 0 calc(1rem + var(--tracking));
+      padding-inline: calc(1rem + var(--tracking)) 1rem;
       font-size: 0.875rem;
       font-weight: 400;
       letter-spacing: var(--tracking);
       text-align: center;
-      text-wrap: balance;
     }
 
-    .short {
-      display: none;
-    }
-
-    /* Too narrow for two lines: the traditional abbreviation */
+    /* Too narrow for two lines: the initials alone spell the traditional abbreviation AMDG */
     @media (width <= 11.25em) {
-      .full {
+      .rest {
         display: none;
-      }
-
-      .short {
-        display: inline;
       }
     }
 
     /* Too narrow for AMDG in a row: stack the letters when the screen is tall enough */
-    @media (width <= 6.25em) and (height >= 8em) {
+    @media (width <= 6.25em) and (height >= 8.25em) {
       h1 {
-        padding: calc(1rem + var(--tracking)) 0 1rem;
         writing-mode: vertical-lr;
         text-orientation: upright;
       }
     }
 
     /* Too narrow and too short to stack */
-    @media (width <= 6.25em) and (height < 8em) {
+    @media (width <= 6.25em) and (height < 8.25em) {
       h1 {
         padding: 0;
         letter-spacing: 0;
@@ -109,7 +97,8 @@
 
 <body>
   <main>
-    <h1><span class="full">AD MAIOREM DEI GLORIAM</span> <span class="short">AMDG</span></h1>
+    <!-- No-break spaces leave one break opportunity, between MAIOREM and DEI -->
+    <h1 lang="la">A<span class="rest">D&nbsp;</span>M<span class="rest">AIOREM </span>D<span class="rest">EI&nbsp;</span>G<span class="rest">LORIAM</span></h1>
   </main>
 </body>
 

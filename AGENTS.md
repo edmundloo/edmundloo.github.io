@@ -14,50 +14,60 @@ Instructions for AI coding agents working in this repository.
 
 Personal website for Edmund Loo, hosted via GitHub Pages at edmundloo.com. Every page is a hand-written HTML file with inline CSS. The homepage shows only the motto. The other paths are shared by word of mouth; do not link to them from the homepage.
 
+GitHub Pages builds the repository with Jekyll, which would publish `AGENTS.md` and `CLAUDE.md` as pages. `_config.yml` excludes them; exclude any new repository-only file the same way.
+
 ## Development
 
-Open a page directly in a browser to preview it. To see folder paths and redirects as GitHub Pages serves them, run `python3 -m http.server 8000` in the repository root and visit `http://localhost:8000`. That server shows its own error page for missing paths; GitHub Pages serves `404.html` instead, so preview it at `/404.html`. There is no build step.
+Open a page directly in a browser to preview it. To see folder paths and redirects as GitHub Pages serves them, run `python3 -m http.server 8000` in the repository root and visit `http://localhost:8000`. That preview differs from GitHub Pages in two ways:
+
+- It shows its own error page for missing paths. GitHub Pages serves `404.html` instead, so preview that page at `/404.html`.
+- On macOS's case-insensitive filesystem it serves `/X/` as `/x/`. GitHub Pages matches paths case-sensitively, so live, only the exact lowercase paths work.
 
 ## Pages
 
 - **`index.html`** — The homepage: "AD MAIOREM DEI GLORIAM", centered.
 - **`portfolio/index.html`** — Startup investments, served at `/portfolio/`.
-- **`404.html`** — GitHub Pages serves this at any missing path, so every link and asset in it must start with `/`.
+- **`404.html`** — GitHub Pages serves this at any missing path, so every same-site link or asset in it must start with `/`; a document-relative path would break below the root.
 - **`resume/`, `x/`, `venmo/`, `flickr/`** — Redirects; see below.
+
+The homepage and 404 headings are Latin and marked `lang="la"`. Every styled page carries `translate="no"`, so browser translation cannot replace text that the font subsets and breakpoints were built for.
 
 ## Redirects
 
 GitHub Pages has no server-side redirects, so each short path is a folder holding an `index.html` with a zero-delay meta refresh. The folder form makes both `/x` and `/x/` work. A meta refresh replaces the current history entry, so Back skips the redirect page.
 
-To add a redirect, copy `x/index.html` into a new folder and change the URL in its refresh tag, canonical link, and fallback link. Keep the rest identical:
+To add a redirect, copy `x/index.html` into a new folder and change the URL in its refresh tag, canonical link, and fallback link, and the destination named in its `og:title`. Keep the rest identical:
 
-- **Blank interstitial.** Safari keeps a redirect page on screen while the destination loads, so the page is a blank Sand screen with no margin and the title `Redirecting…`.
-- **Fallback link.** It reads `Continue` and stays invisible for 3 seconds, then fades in for visitors whose browser blocks automatic refresh.
+- **Blank interstitial.** WebKit keeps a redirect page on screen while the destination loads, so the page is a blank Sand screen with no margin and the title `Redirecting…`.
+- **Preview title.** Link previews in Messages, Slack and similar apps do not follow meta refresh, so `og:title` names the destination (for example "Edmund Loo on X") while the tab reads `Redirecting…`.
+- **Fallback link.** It reads `Continue` (on `/resume`, `Résumé`, because browsers that download the PDF leave the visitor on this page) and is hidden with `visibility`, not just opacity, for 3 seconds, so a tap during the hop cannot add a history entry. It then fades in, which serves browsers that block automatic refresh and destinations slower than 3 seconds. A tap on the visible link does add an entry; no CSS can prevent that.
 - **Viewport meta.** It stops phones from laying the page out 980px wide.
 - **No web fonts.** A font download can delay the load event that the refresh waits for.
+- **Literal colors.** The page repeats the Sand values from the token blocks as literals; change both together.
 
 Do not add `noindex`, and do not list redirects in `sitemap.xml`.
 
 ## Design system
 
-- **Color** — Radix Colors Sand, with light and dark mode via `prefers-color-scheme`. Steps follow Radix's usage roles: step 1 for the background, step 12 for text, step 7 for link underlines, and step 8 for focus outlines. On hover and focus, links ease to step 11 text and their underline fades out over 0.3s, with no easing under `prefers-reduced-motion`. Values (light / dark): step 1 `#fdfdfc` / `#111110`, step 7 `#cfceca` / `#494844`, step 8 `#bcbbb5` / `#62605b`, step 11 `#63635e` / `#b5b3ad`, step 12 `#21201c` / `#eeeeec`.
-- **Tokens** — Each page declares only the CSS custom properties it uses on `:root`. Because there is no build step or shared stylesheet, the token block is repeated in each page; keep shared values identical across pages.
-- **Typography** — Cinzel, a capitals-only serif, is the default font. Inter is the sans-serif counterpart, used for the portfolio list. Both load from Google Fonts at weight 400 with `display=block`.
-- **Font subsetting** — Each page's Google Fonts URL uses the `text=` parameter to download only the characters that page displays. Give each font its own link and `text=` value, because one `text=` applies to every family in a request. When you change displayed text, update that page's `text=` value to match, or new characters will render in a fallback font.
+- **Color** — Radix Colors Sand, with light and dark mode via `prefers-color-scheme`. Steps follow Radix's usage roles: step 1 for the background, step 12 for text, step 7 for link underlines, and step 8 for focus outlines. Values (light / dark): step 1 `#fdfdfc` / `#111110`, step 7 `#cfceca` / `#494844`, step 8 `#bcbbb5` / `#62605b`, step 11 `#63635e` / `#b5b3ad`, step 12 `#21201c` / `#eeeeec`.
+- **Links** — Portfolio links ease to step 11 text and fade their underline over 0.3s on keyboard focus, and on hover only inside `@media (hover: hover)`, because touch screens keep `:hover` after a tap. Reduced motion removes the easing.
+- **Tokens** — Each styled page declares the CSS custom properties it uses on `:root`. Because there is no build step or shared stylesheet, the token block is repeated in each page. Keep shared values identical across pages and the redirect pages' literals.
+- **Typography** — Cinzel, a capitals-only serif, is the default font. Inter is the sans-serif counterpart, used for the portfolio list. Both are SIL Open Font License fonts at weight 400.
+- **Inlined font subsets** — Each styled page embeds, as a base64 `data:` URL in an `@font-face` rule, a subset containing only the characters set in that font (including no-break spaces), so pages make no font requests. The comment above each rule records the license and the Google Fonts `text=` value it was generated from. When you change displayed text, regenerate the subset: request `https://fonts.googleapis.com/css2?family=<Family>&text=<characters>` with a current Chrome User-Agent, download the woff2 file it references, and base64-encode it into the rule. Otherwise new characters render in a fallback font. The Content Security Policy allows fonts only from `data:` URLs.
+- **Letter-spacing** — Tracked text gets an extra leading inset equal to its letter-spacing, because current browsers add the spacing after the last letter. The CSS Text specification is moving to symmetric spacing trimmed at line edges, and Firefox Nightly already uses it; when browsers ship that, remove the extra inset.
 
 ## Small viewports
 
-Every page must stay legible, with no sideways scrolling, down to the tiniest viewport. Headings hold a full and a short version in `.full` and `.short` spans, and media queries in `em` choose one:
+Every page must stay legible down to the tiniest viewport, with no sideways scrolling, and one-heading pages must not scroll at all. Media queries in `em`, with inclusive `<=` bounds, switch to a shorter form using one of two patterns:
 
-- **Homepage** — The motto on one line, then two balanced lines, then `AMDG`. Below `6.25em` wide, `AMDG` stacks vertically if the screen is at least `8em` tall; otherwise it drops its padding and letter-spacing.
-- **`404.html`** — `NON INVENTUM`, then `404` below `13em`, stacking below `4.5em` wide when at least `6.25em` tall.
-- **Portfolio** — Below `10em`, no side padding or heading letter-spacing. Below `5.25em`, each row shows only its capitalized first letter: every heading and name is written as its first letter followed by `<span class="rest">`, which hides.
+- **Initials** — The homepage motto, the portfolio rows, and the redirect link write each word as its first letter followed by `<span class="rest">…</span>`, which hides on narrow screens. The motto's initials spell `AMDG`. No-break spaces in the motto leave a single break, between `MAIOREM` and `DEI`.
+- **Two spans** — The 404 heading holds `NON INVENTUM` in `.full` and `404` in `.short`.
 
-No heading or link may wrap onto a second line, except the homepage motto's two balanced lines. If you change displayed text, re-measure it and move its breakpoints, and keep every character it can show in the page's `text=` subset.
+Narrower still, the homepage and 404 headings stack vertically when the screen is tall enough, and otherwise drop their padding and letter-spacing. No heading or link may wrap, except the homepage motto's two lines. Each breakpoint is that tier's rendered size, measured with the final font subsets loaded, plus a small margin. If you change displayed text, re-measure and move the breakpoints.
 
 ## Metadata
 
-- `sitemap.xml` lists `/`, `/portfolio/`, and the résumé PDF. Update `lastmod` when a listed page changes.
-- Pages have no meta description by design; search snippets come from the page text.
-- The site has no icon files or web app manifest by design. Every page, including redirects, declares `<link rel="icon" href="data:," />` so browsers do not request a missing `/favicon.ico`.
-- `robots.txt` points crawlers to the sitemap. `CNAME` sets the custom domain `edmundloo.com`.
+- `sitemap.xml` lists `/`, `/portfolio/`, and the résumé PDF, and `robots.txt` points crawlers to it. Update `lastmod` when a listed page changes.
+- By design the styled pages have no meta description, Open Graph or Twitter tags, or structured data; search snippets and link previews use the title and page text. Only the redirect pages carry an `og:title`.
+- The site has no icon files or web app manifest by design. Every HTML page declares `<link rel="icon" href="data:," />` so browsers do not request the missing `/favicon.ico`. The résumé PDF cannot declare one, so viewing it still requests `/favicon.ico` and gets the 404 page.
+- `BingSiteAuth.xml` verifies the site with Bing Webmaster Tools; keep it. `CNAME` sets the custom domain `edmundloo.com`.

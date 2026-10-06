@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" translate="no">
 
 <head>
-  <!-- Character encoding, viewport, and color scheme -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lets Apple Watch use its real width, so the small-viewport tiers apply -->
+  <meta name="disabled-adaptations" content="watch" />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)" />
 
-  <!-- Primary Meta Tags -->
   <title>Portfolio | Edmund Loo</title>
   <link rel="canonical" href="https://edmundloo.com/portfolio/" />
 
-  <!-- Security -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;" />
+    content="default-src 'self'; style-src 'unsafe-inline'; font-src data:; img-src 'self' data:;" />
 
   <!-- No icon: an empty data: URL stops browsers requesting /favicon.ico -->
   <link rel="icon" href="data:," />
 
-  <!-- Fonts: text= must list every character the page displays -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&text=PORTFOLIO&display=block" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter&text=Artemis%20Clearco%20Fragment%20Parafin%20Pipe%20Robinhood%20SpaceX%20Stytch%20xAI&display=block"
-    rel="stylesheet" />
-
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-
   <style>
+    /* Cinzel, Copyright The Cinzel Project Authors, SIL Open Font License 1.1; Google Fonts subset text=PORTFOLIO */
+    @font-face {
+      font-family: "Cinzel";
+      font-display: block;
+      src: url(data:font/woff2;base64,d09GMgABAAAAAAWMAA8AAAAACqgAAAUzAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgVwcKAZgP1NUQVQuAGQRCAqJQId3CxQAATYCJAMkBCAFg3wHIBvKCMgEHnratPd3F/sxmcapOVUjhEkqhIgaSU24c6ipcKq6f9yvdKNsezx9AXdW6Ue/ja7LpCOO0n+UbZVEUXpgB2S3yDZGZOnpOe1LbwQQjA6KMlJDYMSEGD6fpB+jURzOubmEtlb1tBOKdiX1x+jWUudpx1zgkUFDwRy9AwmQztasJxvTDNe3iV//QkJAGFb9Sf9W36IZPtZf0Z9K/IPhODgrKDjAtLZToHKKAaeqxo1QgWF3p0CIQDyRWDZQKanNyKRJ30JLP4AB0khMpqjhVU4pEeuRZBWfUqg65mTLi3JGi2H4zH5o/TAT65zOLq5MVxoPYiVXffH/1cIw9UXRY4VNw1nxqxIQnVb8YEYC0cnIRJSFDY09QkHOqZAVqlivOAOvBxiAaKJYptZwx8MJH9rYipMM5uImm1z8VEeSeYD+pX5Lv6Ff06/ol/VL86fxawKh6y8kj8AiVSOBoXpzL4if2ZwakvUkBowoGDB8AJzmC8wKo2Q1Iys1zazFwsOTGoEpWkdgvKjZWLQ0ZHF1iCW4QpOGOqRoIFgUIYX3pBQFavzYKZFh0D2TfP8T1xrV8/uF/4GECum9X3p9IjaoLGjHfUFefxByjZllF8U7bcU6BhGEzyd8gV5sr9dEsKjJlVP8bzySUjnHnec8Q4v/tddY9eqr0vf668L7xhtl/jfeEN7XX5e+V19l1WuvVQSN7vHiq69PFt4rTzzzQsq2fbHybNK7dWvQkaY7tFAUgvyvvbT4zY/cF+c989BDMSfuuxGE9L1+f/zWsw8/fDb25P1SeI8MPPbEqnM5jz7qE8Ykus5V8HMtmjTUECraiBXe+weIgofoDjrCf1jO4QBEC7HlymNBuaO6MTjWY3CUjRr24TCeuhWYFeibk/x5cnhOSkTKZx12GRYdiFYmldgnK7ZAdOjYP1JlWPSz0eqZpMUy1rDNvirDLQkh3mFRBqvxufEEY3FP9qgWRzzBQrp56lZgVkDxZLglIcQ7LMpg1eKIJwTpnuxRLY54goV0d2e4pQgm3mHhqVv6L3btTolImXfbpANHp4+zW3f9tqJwcjg9Y8pXTj/VcqC4+FBbW/GhA8UtzdVXmm7krchxbqmtdW5ZkZOXK/zVBG7dMbNk+Kj8qSP6pl+Y08ttyJFE2w+OfHqILQxHWs7MBbhcIUefjiB2CCsCt9YMT48Lf8xhtmEFc8fbjEs+4ejdW34Y1/VJkpwwwp7w5s99jzjGbI4c9FaC5EP3+vdK3t1htal2t+fC/kEIg75Fp2e/U8pM8q7fmHVjlpqcmmyPz1ofEde7UxWI16Ac53VPn3foXwfUVRFxEeuzhm+6OyZmseS1BA/fT4EsV8TairCpv5lV9cvB3DPle3tlB7wzYbSm//b/aoNNfRG+e8xnBBA8jrfWV//t/xiDjau8hEX8ymgliakim6nKaKaqTpzKLKYqR5iqNBPN3ycIPwvthLOA8Pmg7hOTrOB7nMaXknv5sLIIgnnVohDK4xaV0Wy2aCSyyGIgnnKLkUTs5lDGE+wXyqlIAKjrbVRAHU000EhPNLSHTrqZzEh1rW5q8NBEJz0SO8JB4KFaGUEHHhoYSSZO5pJKE+0soY5WhpNNHQ3MF6pVeMjXwDNnow7asTKaEdiCKbY96ySGtz4FF5m4SGPKHtM0pjD1TKWDThZTIAhiCMAW8bOSSyN1WJFs5MZDB83UUcMan8X8B4NRnr0bK4MeUryBpotnnU81I6ihgzZG4sJBBjmkwsr5pJHNSAkGn22oMZe+m9H4AA==) format("woff2");
+    }
+
+    /* Inter, Copyright The Inter Project Authors, SIL Open Font License 1.1; Google Fonts subset text=Artemis%20Clearco%20Fragment%20Parafin%20Pipe%20Robinhood%20SpaceX%20Stytch%20xAI */
+    @font-face {
+      font-family: "Inter";
+      font-display: block;
+      src: url(data:font/woff2;base64,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) format("woff2");
+    }
+
     /* Radix Sand: step 1 background, steps 12 and 11 text, step 7 underline, step 8 focus ring */
     :root {
       --color-bg: #fdfdfc;
@@ -96,22 +99,25 @@
 
     a {
       color: inherit;
-      text-decoration-line: underline;
       text-decoration-color: var(--color-line);
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
-      transition: color 0.3s ease, text-decoration-color 0.3s ease;
+      transition: color 0.3s, text-decoration-color 0.3s;
     }
 
-    a:hover,
     a:focus-visible {
       color: var(--color-text-hover);
       text-decoration-color: transparent;
-    }
-
-    a:focus-visible {
       outline: 1px solid var(--color-focus);
       outline-offset: 2px;
+    }
+
+    /* Touch screens keep :hover after a tap, so only pointing devices get the hover style */
+    @media (hover: hover) {
+      a:hover {
+        color: var(--color-text-hover);
+        text-decoration-color: transparent;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -120,7 +126,6 @@
       }
     }
 
-    /* Narrow screens: drop the side padding and the heading's letter-spacing */
     @media (width <= 10em) {
       main {
         padding-inline: 0;
@@ -149,15 +154,15 @@
   <main>
     <h1>P<span class="rest">ORTFOLIO</span></h1>
     <ul>
-      <li><a href="https://www.artemis.ai/" target="_blank" rel="noopener noreferrer">A<span class="rest">rtemis</span></a></li>
-      <li><a href="https://clear.co/" target="_blank" rel="noopener noreferrer">C<span class="rest">learco</span></a></li>
-      <li><a href="https://fragment.dev/" target="_blank" rel="noopener noreferrer">F<span class="rest">ragment</span></a></li>
-      <li><a href="https://www.parafin.com/" target="_blank" rel="noopener noreferrer">P<span class="rest">arafin</span></a></li>
-      <li><a href="https://pipe.com/" target="_blank" rel="noopener noreferrer">P<span class="rest">ipe</span></a></li>
-      <li><a href="https://robinhood.com/" target="_blank" rel="noopener noreferrer">R<span class="rest">obinhood</span></a></li>
-      <li><a href="https://www.spacex.com/" target="_blank" rel="noopener noreferrer">S<span class="rest">paceX</span></a></li>
-      <li><a href="https://stytch.com/" target="_blank" rel="noopener noreferrer">S<span class="rest">tytch</span></a></li>
-      <li><a href="https://x.ai/" target="_blank" rel="noopener noreferrer">x<span class="rest">AI</span></a></li>
+      <li><a href="https://www.artemis.ai/" target="_blank" rel="noreferrer">A<span class="rest">rtemis</span></a></li>
+      <li><a href="https://clear.co/" target="_blank" rel="noreferrer">C<span class="rest">learco</span></a></li>
+      <li><a href="https://fragment.dev/" target="_blank" rel="noreferrer">F<span class="rest">ragment</span></a></li>
+      <li><a href="https://www.parafin.com/" target="_blank" rel="noreferrer">P<span class="rest">arafin</span></a></li>
+      <li><a href="https://pipe.com/" target="_blank" rel="noreferrer">P<span class="rest">ipe</span></a></li>
+      <li><a href="https://robinhood.com/" target="_blank" rel="noreferrer">R<span class="rest">obinhood</span></a></li>
+      <li><a href="https://www.spacex.com/" target="_blank" rel="noreferrer">S<span class="rest">paceX</span></a></li>
+      <li><a href="https://stytch.com/" target="_blank" rel="noreferrer">S<span class="rest">tytch</span></a></li>
+      <li><a href="https://x.ai/" target="_blank" rel="noreferrer">x<span class="rest">AI</span></a></li>
     </ul>
   </main>
 </body>
