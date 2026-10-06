@@ -1,0 +1,4 @@
+# GitHub Pages builds this site with Jekyll; keep the agent instruction files off the published site.
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
