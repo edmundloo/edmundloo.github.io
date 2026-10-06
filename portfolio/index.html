@@ -144,16 +144,14 @@
       }
     }
 
-    /* Too narrow for PORTFOLIO in a row: stack the letters */
+    /* Too narrow for PORTFOLIO in a row: each row shows only its first letter */
     @media (width <= 5.25em) {
-      h1 {
-        margin: 0 auto 2rem;
-        writing-mode: vertical-lr;
-        text-orientation: upright;
+      .rest {
+        display: none;
       }
 
-      ul {
-        overflow-wrap: anywhere;
+      a {
+        text-transform: uppercase;
       }
     }
   </style>
@@ -161,17 +159,17 @@
 
 <body>
   <main>
-    <h1>PORTFOLIO</h1>
+    <h1>P<span class="rest">ORTFOLIO</span></h1>
     <ul>
-      <li><a href="https://www.artemis.ai/" target="_blank" rel="noopener noreferrer">Artemis</a></li>
-      <li><a href="https://clear.co/" target="_blank" rel="noopener noreferrer">Clearco</a></li>
-      <li><a href="https://fragment.dev/" target="_blank" rel="noopener noreferrer">Fragment</a></li>
-      <li><a href="https://www.parafin.com/" target="_blank" rel="noopener noreferrer">Parafin</a></li>
-      <li><a href="https://pipe.com/" target="_blank" rel="noopener noreferrer">Pipe</a></li>
-      <li><a href="https://robinhood.com/" target="_blank" rel="noopener noreferrer">Robinhood</a></li>
-      <li><a href="https://www.spacex.com/" target="_blank" rel="noopener noreferrer">SpaceX</a></li>
-      <li><a href="https://stytch.com/" target="_blank" rel="noopener noreferrer">Stytch</a></li>
-      <li><a href="https://x.ai/" target="_blank" rel="noopener noreferrer">xAI</a></li>
+      <li><a href="https://www.artemis.ai/" target="_blank" rel="noopener noreferrer">A<span class="rest">rtemis</span></a></li>
+      <li><a href="https://clear.co/" target="_blank" rel="noopener noreferrer">C<span class="rest">learco</span></a></li>
+      <li><a href="https://fragment.dev/" target="_blank" rel="noopener noreferrer">F<span class="rest">ragment</span></a></li>
+      <li><a href="https://www.parafin.com/" target="_blank" rel="noopener noreferrer">P<span class="rest">arafin</span></a></li>
+      <li><a href="https://pipe.com/" target="_blank" rel="noopener noreferrer">P<span class="rest">ipe</span></a></li>
+      <li><a href="https://robinhood.com/" target="_blank" rel="noopener noreferrer">R<span class="rest">obinhood</span></a></li>
+      <li><a href="https://www.spacex.com/" target="_blank" rel="noopener noreferrer">S<span class="rest">paceX</span></a></li>
+      <li><a href="https://stytch.com/" target="_blank" rel="noopener noreferrer">S<span class="rest">tytch</span></a></li>
+      <li><a href="https://x.ai/" target="_blank" rel="noopener noreferrer">x<span class="rest">AI</span></a></li>
     </ul>
   </main>
 </body>

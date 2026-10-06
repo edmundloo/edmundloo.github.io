@@ -16,7 +16,7 @@ Personal website for Edmund Loo, hosted via GitHub Pages at edmundloo.com. Every
 
 ## Development
 
-Open a page directly in a browser to preview it. To see folder paths and redirects as GitHub Pages serves them, run `python3 -m http.server 8000` in the repository root and visit `http://localhost:8000`. There is no build step.
+Open a page directly in a browser to preview it. To see folder paths and redirects as GitHub Pages serves them, run `python3 -m http.server 8000` in the repository root and visit `http://localhost:8000`. That server shows its own error page for missing paths; GitHub Pages serves `404.html` instead, so preview it at `/404.html`. There is no build step.
 
 ## Pages
 
@@ -68,9 +68,9 @@ Every page must stay legible, with no sideways scrolling, down to the tiniest vi
 
 - **Homepage** — The motto on one line, then two balanced lines, then `AMDG`. Below `6.25em` wide, `AMDG` stacks vertically if the screen is at least `8em` tall; otherwise it drops its padding and letter-spacing.
 - **`404.html`** — `NON INVENTUM`, then `404` below `13em`, stacking below `4.5em` wide when at least `6.25em` tall.
-- **Portfolio** — Below `10em`, no side padding or heading letter-spacing; below `5.25em`, the heading stacks and company names may break mid-word.
+- **Portfolio** — Below `10em`, no side padding or heading letter-spacing. Below `5.25em`, each row shows only its capitalized first letter: every heading and name is written as its first letter followed by `<span class="rest">`, which hides.
 
-If you change a heading's text, re-measure it and move its breakpoints, and keep the short version's characters in the page's `text=` subset.
+No heading or link may wrap onto a second line, except the homepage motto's two balanced lines. If you change displayed text, re-measure it and move its breakpoints, and keep every character it can show in the page's `text=` subset.
 
 ## Metadata
 
