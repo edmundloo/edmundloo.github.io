@@ -43,12 +43,13 @@
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
   <style>
-    /* Radix Sand: step 1 background, step 12 text, steps 7 and 8 link underlines */
+    /* Radix Sand: step 1 background, steps 12 and 11 text, step 7 underline, step 8 focus ring */
     :root {
       --color-bg: #fdfdfc;
       --color-text: #21201c;
+      --color-text-hover: #63635e;
       --color-line: #cfceca;
-      --color-line-hover: #bcbbb5;
+      --color-focus: #bcbbb5;
       --font-serif: "Cinzel", serif;
       --font-sans: "Inter", sans-serif;
       --tracking: 0.3em;
@@ -58,8 +59,9 @@
       :root {
         --color-bg: #111110;
         --color-text: #eeeeec;
+        --color-text-hover: #b5b3ad;
         --color-line: #494844;
-        --color-line-hover: #62605b;
+        --color-focus: #62605b;
       }
     }
 
@@ -110,16 +112,24 @@
       text-decoration-color: var(--color-line);
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
+      transition: color 0.3s ease, text-decoration-color 0.3s ease;
     }
 
     a:hover,
     a:focus-visible {
-      text-decoration-color: var(--color-line-hover);
+      color: var(--color-text-hover);
+      text-decoration-color: transparent;
     }
 
     a:focus-visible {
-      outline: 1px solid var(--color-line-hover);
+      outline: 1px solid var(--color-focus);
       outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      a {
+        transition: none;
+      }
     }
 
     /* Narrow screens: drop the side padding and the heading's letter-spacing */
