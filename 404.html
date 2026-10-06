@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US" translate="no">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lets Apple Watch use its real width, so the small-viewport tiers apply -->
+  <meta name="disabled-adaptations" content="watch" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)" />
+
+  <!-- No canonical: GitHub Pages serves this page at every missing path -->
+  <title>Edmund Loo</title>
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'unsafe-inline'; font-src data:; img-src 'self' data:;" />
+
+  <!-- No icon: an empty data: URL stops browsers requesting /favicon.ico -->
+  <link rel="icon" href="data:," />
+
+  <style>
+    /* Cinzel, Copyright The Cinzel Project Authors, SIL Open Font License 1.1; Google Fonts subset text=NON%20INVENTUM%20404 */
+    @font-face {
+      font-family: "Cinzel";
+      font-display: block;
+      src: url(data:font/woff2;base64,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) format("woff2");
+    }
+
+    /* Radix Sand: step 1 background, step 12 text */
+    :root {
+      --color-bg: #fdfdfc;
+      --color-text: #21201c;
+      --font-serif: "Cinzel", serif;
+      --tracking: 0.3em;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #111110;
+        --color-text: #eeeeec;
+      }
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-serif);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1 {
+      margin: 0;
+      /* The extra leading inset balances the letter-spacing after the last letter */
+      padding-inline: calc(1rem + var(--tracking)) 1rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: var(--tracking);
+      text-align: center;
+    }
+
+    .short {
+      display: none;
+    }
+
+    /* Too narrow for NON INVENTUM in a row */
+    @media (width <= 13em) {
+      .full {
+        display: none;
+      }
+
+      .short {
+        display: inline;
+      }
+    }
+
+    /* Too narrow for 404 in a row: stack the digits when the screen is tall enough */
+    @media (width <= 4.75em) and (height >= 6.875em) {
+      h1 {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+      }
+    }
+
+    /* Too narrow and too short to stack */
+    @media (width <= 4.75em) and (height < 6.875em) {
+      h1 {
+        padding: 0;
+        letter-spacing: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1><span class="full" lang="la">NON INVENTUM</span> <span class="short">404</span></h1>
+  </main>
+</body>
+
+</html>

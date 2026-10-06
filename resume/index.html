@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <meta http-equiv="refresh" content="0; url=/Edmund_Loo_Resume.pdf" />
+  <link rel="canonical" href="https://edmundloo.com/Edmund_Loo_Resume.pdf" />
+  <link rel="icon" href="data:," />
+  <title>Redirecting…</title>
+  <!-- Link previews do not follow meta refresh, so they read this instead of the title -->
+  <meta property="og:title" content="Edmund Loo — Résumé" />
+  <style>
+    /* Radix Sand: step 1 background, step 12 text, step 7 underline, step 8 focus ring */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      background-color: #fdfdfc;
+      color: #21201c;
+      font: 0.875rem serif;
+    }
+
+    /* Hidden for 3 s so a normal hop shows a blank page; then shown for blocked refreshes and slow destinations */
+    a {
+      padding-left: 0.3em;
+      color: inherit;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      text-decoration-color: #cfceca;
+      text-underline-offset: 3px;
+      animation: reveal 0.3s 3s backwards;
+    }
+
+    a:focus-visible {
+      outline: 1px solid #bcbbb5;
+      outline-offset: 2px;
+    }
+
+    /* visibility, not just opacity, so a tap during the hop cannot add a history entry */
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111110;
+        color: #eeeeec;
+      }
+
+      a {
+        text-decoration-color: #494844;
+      }
+
+      a:focus-visible {
+        outline-color: #62605b;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      a {
+        animation-duration: 0s;
+      }
+    }
+
+    @media (width <= 7em) {
+      a {
+        padding-left: 0;
+        letter-spacing: 0;
+      }
+    }
+
+    /* Too narrow for the link text in a row: only its first letter */
+    @media (width <= 4.75em) {
+      .rest {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="/Edmund_Loo_Resume.pdf">R<span class="rest">ésumé</span></a>
+</body>
+
+</html>
