@@ -60,7 +60,7 @@ Do not add `noindex`, and do not list redirects in `sitemap.xml`.
 - **Color** — Radix Colors Sand, with light and dark mode via `prefers-color-scheme`. Steps follow Radix's usage roles: step 1 for the background, step 12 for text, step 7 for link underlines, and step 8 for hovered underlines and focus outlines. Values (light / dark): step 1 `#fdfdfc` / `#111110`, step 7 `#cfceca` / `#494844`, step 8 `#bcbbb5` / `#62605b`, step 12 `#21201c` / `#eeeeec`.
 - **Tokens** — Each page declares only the CSS custom properties it uses on `:root`. Because there is no build step or shared stylesheet, the token block is repeated in each page; keep shared values identical across pages.
 - **Typography** — Cinzel, a capitals-only serif, is the default font. Inter is the sans-serif counterpart, used for the portfolio list. Both load from Google Fonts at weight 400 with `display=block`.
-- **Font subsetting** — Each page's Google Fonts URL uses the `text=` parameter to download only the characters that page displays. When you change displayed text, update that page's `text=` value to match, or new characters will render in a fallback font.
+- **Font subsetting** — Each page's Google Fonts URL uses the `text=` parameter to download only the characters that page displays. Give each font its own link and `text=` value, because one `text=` applies to every family in a request. When you change displayed text, update that page's `text=` value to match, or new characters will render in a fallback font.
 
 ## Metadata
 
