@@ -82,13 +82,46 @@
       font-weight: 400;
       letter-spacing: var(--tracking);
       text-align: center;
+      text-wrap: balance;
+    }
+
+    .short {
+      display: none;
+    }
+
+    /* Too narrow for two lines: the traditional abbreviation */
+    @media (width <= 11.25em) {
+      .full {
+        display: none;
+      }
+
+      .short {
+        display: inline;
+      }
+    }
+
+    /* Too narrow for AMDG in a row: stack the letters when the screen is tall enough */
+    @media (width <= 6.25em) and (height >= 8em) {
+      h1 {
+        padding: calc(1rem + var(--tracking)) 0 1rem;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+      }
+    }
+
+    /* Too narrow and too short to stack */
+    @media (width <= 6.25em) and (height < 8em) {
+      h1 {
+        padding: 0;
+        letter-spacing: 0;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-    <h1>AD MAIOREM DEI GLORIAM</h1>
+    <h1><span class="full">AD MAIOREM DEI GLORIAM</span> <span class="short">AMDG</span></h1>
   </main>
 </body>
 

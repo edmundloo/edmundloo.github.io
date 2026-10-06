@@ -62,6 +62,16 @@ Do not add `noindex`, and do not list redirects in `sitemap.xml`.
 - **Typography** — Cinzel, a capitals-only serif, is the default font. Inter is the sans-serif counterpart, used for the portfolio list. Both load from Google Fonts at weight 400 with `display=block`.
 - **Font subsetting** — Each page's Google Fonts URL uses the `text=` parameter to download only the characters that page displays. Give each font its own link and `text=` value, because one `text=` applies to every family in a request. When you change displayed text, update that page's `text=` value to match, or new characters will render in a fallback font.
 
+## Small viewports
+
+Every page must stay legible, with no sideways scrolling, down to the tiniest viewport. Headings hold a full and a short version in `.full` and `.short` spans, and media queries in `em` choose one:
+
+- **Homepage** — The motto on one line, then two balanced lines, then `AMDG`. Below `6.25em` wide, `AMDG` stacks vertically if the screen is at least `8em` tall; otherwise it drops its padding and letter-spacing.
+- **`404.html`** — `NON INVENTUM`, then `404` below `13em`, stacking below `4.5em` wide when at least `6.25em` tall.
+- **Portfolio** — Below `10em`, no side padding or heading letter-spacing; below `5.25em`, the heading stacks and company names may break mid-word.
+
+If you change a heading's text, re-measure it and move its breakpoints, and keep the short version's characters in the page's `text=` subset.
+
 ## Metadata
 
 - `sitemap.xml` lists `/`, `/portfolio/`, and the résumé PDF. Update `lastmod` when a listed page changes.

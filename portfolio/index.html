@@ -121,6 +121,31 @@
       outline: 1px solid var(--color-line-hover);
       outline-offset: 2px;
     }
+
+    /* Narrow screens: drop the side padding and the heading's letter-spacing */
+    @media (width <= 10em) {
+      main {
+        padding-inline: 0;
+      }
+
+      h1 {
+        padding-left: 0;
+        letter-spacing: 0;
+      }
+    }
+
+    /* Too narrow for PORTFOLIO in a row: stack the letters */
+    @media (width <= 5.25em) {
+      h1 {
+        margin: 0 auto 2rem;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+      }
+
+      ul {
+        overflow-wrap: anywhere;
+      }
+    }
   </style>
 </head>
 

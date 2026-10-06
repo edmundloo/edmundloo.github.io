@@ -34,7 +34,7 @@
   <!-- Fonts: text= must list every character the page displays -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&text=NON%20INVENTUM&display=block" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&text=NON%20INVENTUM%20404&display=block" rel="stylesheet" />
 
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
@@ -81,12 +81,44 @@
       letter-spacing: var(--tracking);
       text-align: center;
     }
+
+    .short {
+      display: none;
+    }
+
+    /* Too narrow for NON INVENTUM in a row */
+    @media (width <= 13em) {
+      .full {
+        display: none;
+      }
+
+      .short {
+        display: inline;
+      }
+    }
+
+    /* Too narrow for 404 in a row: stack the digits when the screen is tall enough */
+    @media (width <= 4.5em) and (height >= 6.25em) {
+      h1 {
+        padding: calc(1rem + var(--tracking)) 0 1rem;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+      }
+    }
+
+    /* Too narrow and too short to stack */
+    @media (width <= 4.5em) and (height < 6.25em) {
+      h1 {
+        padding: 0;
+        letter-spacing: 0;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main>
-    <h1>NON INVENTUM</h1>
+    <h1><span class="full">NON INVENTUM</span> <span class="short">404</span></h1>
   </main>
 </body>
 
