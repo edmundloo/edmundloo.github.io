@@ -27,31 +27,14 @@ Open a page directly in a browser to preview it. To see folder paths and redirec
 
 ## Redirects
 
-GitHub Pages has no server-side redirects, so each short path is a folder holding an `index.html` with a zero-delay meta refresh. The folder form makes both `/x` and `/x/` work. A meta refresh replaces the current history entry, so Back skips the redirect page. Safari keeps the redirect page on screen while the destination loads, so the template sets the Sand background and lets the fallback link take the text color. Use this template:
+GitHub Pages has no server-side redirects, so each short path is a folder holding an `index.html` with a zero-delay meta refresh. The folder form makes both `/x` and `/x/` work. A meta refresh replaces the current history entry, so Back skips the redirect page.
 
-```html
-<!DOCTYPE html>
-<html lang="en-US">
+To add a redirect, copy `x/index.html` into a new folder and change the URL in its refresh tag, canonical link, and fallback link. Keep the rest identical:
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="color-scheme" content="light dark" />
-  <meta http-equiv="refresh" content="0; url=https://example.com/target" />
-  <link rel="canonical" href="https://example.com/target" />
-  <title>Name</title>
-  <style>
-    body { background-color: #fdfdfc; }
-    @media (prefers-color-scheme: dark) { body { background-color: #111110; } }
-    a { color: inherit; }
-  </style>
-</head>
-
-<body>
-  <a href="https://example.com/target">example.com/target</a>
-</body>
-
-</html>
-```
+- **Blank interstitial.** Safari keeps a redirect page on screen while the destination loads, so the page is a blank Sand screen with no margin and the title `Redirecting…`.
+- **Fallback link.** It reads `Continue` and stays invisible for 3 seconds, then fades in for visitors whose browser blocks automatic refresh.
+- **Viewport meta.** It stops phones from laying the page out 980px wide.
+- **No web fonts.** A font download can delay the load event that the refresh waits for.
 
 Do not add `noindex`, and do not list redirects in `sitemap.xml`.
 
