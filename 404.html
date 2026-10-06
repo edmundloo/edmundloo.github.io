@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <!-- Character encoding, viewport, and color scheme -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)" />
+
+  <!-- Primary Meta Tags; no canonical because GitHub Pages serves this at every missing path -->
+  <title>Edmund Loo</title>
+
+  <!-- Mobile Meta Tags -->
+  <meta name="apple-mobile-web-app-title" content="Edmund Loo" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Security -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;" />
+
+  <!-- Favicons: keep every path rooted at / -->
+  <link rel="icon" type="image/png" href="/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="mask-icon" href="/favicon.svg" color="#21201c" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts: text= must list every character the page displays -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&text=NON%20INVENTUM&display=block" rel="stylesheet" />
+
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <style>
+    /* Radix Sand: step 1 background, step 12 text */
+    :root {
+      --color-bg: #fdfdfc;
+      --color-text: #21201c;
+      --font-serif: "Cinzel", serif;
+      --tracking: 0.3em;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #111110;
+        --color-text: #eeeeec;
+      }
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-serif);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1 {
+      margin: 0;
+      /* The extra leading inset balances the letter-spacing after the last letter */
+      padding: 0 1rem 0 calc(1rem + var(--tracking));
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: var(--tracking);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>NON INVENTUM</h1>
+  </main>
+</body>
+
+</html>
