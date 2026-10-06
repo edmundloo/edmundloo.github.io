@@ -1,4 +1,8 @@
-# GitHub Pages builds this site with Jekyll; keep the agent instruction files off the published site.
+# GitHub Pages builds this site with Jekyll. Publish only the site's own files.
+# No theme: otherwise GitHub adds its default theme's stylesheet at /assets/css/style.css.
+theme: null
+# A custom exclude list replaces GitHub's default, which is what kept CNAME unpublished.
 exclude:
   - AGENTS.md
   - CLAUDE.md
+  - CNAME

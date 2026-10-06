@@ -14,7 +14,7 @@ Instructions for AI coding agents working in this repository.
 
 Personal website for Edmund Loo, hosted via GitHub Pages at edmundloo.com. Every page is a hand-written HTML file with inline CSS. The homepage shows only the motto. The other paths are shared by word of mouth; do not link to them from the homepage.
 
-GitHub Pages builds the repository with Jekyll, which would publish `AGENTS.md` and `CLAUDE.md` as pages. `_config.yml` excludes them; exclude any new repository-only file the same way.
+GitHub Pages builds the repository with Jekyll. `_config.yml` keeps the published site to the pages, redirects, résumé, `robots.txt`, `sitemap.xml` and `BingSiteAuth.xml` (Bing ownership verification). It turns off GitHub's default theme, which would otherwise add an unused stylesheet. It also excludes `AGENTS.md`, `CLAUDE.md` and `CNAME`, which Jekyll would otherwise publish. Exclude any new repository-only file the same way; dot-files and files starting with `_` are never published.
 
 ## Development
 
