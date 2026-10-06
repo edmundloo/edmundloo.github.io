@@ -27,8 +27,8 @@
       "purpose": "any"
     }
   ],
-  "theme_color": "#fdf6e3",
-  "background_color": "#fdf6e3",
+  "theme_color": "#fdfdfc",
+  "background_color": "#fdfdfc",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "start_url": "/",
