@@ -14,7 +14,7 @@ Instructions for AI coding agents working in this repository.
 
 Personal website for Edmund Loo, hosted via GitHub Pages at edmundloo.com. Every page is a hand-written HTML file with inline CSS. The homepage shows only the motto. The other paths are shared by word of mouth; do not link to them from the homepage.
 
-GitHub Pages builds the repository with Jekyll. `_config.yml` keeps the published site to the pages, redirects, résumé, `robots.txt`, `sitemap.xml` and `BingSiteAuth.xml` (Bing ownership verification). It turns off GitHub's default theme, which would otherwise add an unused stylesheet. It also excludes `AGENTS.md`, `CLAUDE.md` and `CNAME`, which Jekyll would otherwise publish. Exclude any new repository-only file the same way; dot-files and files starting with `_` are never published.
+GitHub Pages builds the repository with Jekyll. `_config.yml` keeps the published site to the pages, redirects, résumé and `BingSiteAuth.xml` (Bing ownership verification). It turns off GitHub's default theme, which would otherwise add an unused stylesheet. It also excludes `AGENTS.md`, `CLAUDE.md` and `CNAME`, which Jekyll would otherwise publish. Exclude any new repository-only file the same way; dot-files and files starting with `_` are never published.
 
 ## Development
 
@@ -45,7 +45,7 @@ To add a redirect, copy `x/index.html` into a new folder and change the URL in i
 - **No web fonts.** A font download can delay the load event that the refresh waits for.
 - **Literal colors.** The page repeats the Sand values from the token blocks as literals; change both together.
 
-Do not add `noindex`, and do not list redirects in `sitemap.xml`.
+Do not add `noindex` to redirects; search engines follow them to the destination.
 
 ## Design system
 
@@ -67,7 +67,7 @@ Narrower still, the homepage and 404 headings stack vertically when the screen i
 
 ## Metadata
 
-- `sitemap.xml` lists `/`, `/portfolio/`, and the résumé PDF, and `robots.txt` points crawlers to it. Update `lastmod` when a listed page changes.
+- There is no `sitemap.xml` or `robots.txt`: search engines find the homepage on their own, and a missing `robots.txt` allows everything. The portfolio carries `noindex` so it stays out of search results; the homepage and résumé are indexable.
 - By design the styled pages have no meta description, Open Graph or Twitter tags, or structured data; search snippets and link previews use the title and page text. Only the redirect pages carry an `og:title`.
 - The site has no icon files or web app manifest by design. Every HTML page declares `<link rel="icon" href="data:," />` so browsers do not request the missing `/favicon.ico`. The résumé PDF cannot declare one, so viewing it still requests `/favicon.ico` and gets the 404 page.
 - `BingSiteAuth.xml` verifies the site with Bing Webmaster Tools; keep it. `CNAME` sets the custom domain `edmundloo.com`.
