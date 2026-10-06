@@ -59,4 +59,5 @@ No heading or link may wrap onto a second line, except the homepage motto's two 
 
 - `sitemap.xml` lists `/`, `/portfolio/`, and the résumé PDF. Update `lastmod` when a listed page changes.
 - Pages have no meta description by design; search snippets come from the page text.
-- `site.webmanifest`, `robots.txt`, and the favicons complete the site. `CNAME` sets the custom domain `edmundloo.com`.
+- The site has no icon files or web app manifest by design. Every page, including redirects, declares `<link rel="icon" href="data:," />` so browsers do not request a missing `/favicon.ico`.
+- `robots.txt` points crawlers to the sitemap. `CNAME` sets the custom domain `edmundloo.com`.

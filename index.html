@@ -13,24 +13,12 @@
   <title>Edmund Loo</title>
   <link rel="canonical" href="https://edmundloo.com/" />
 
-  <!-- Mobile Meta Tags -->
-  <meta name="apple-mobile-web-app-title" content="Edmund Loo" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="format-detection" content="telephone=no" />
-
   <!-- Security -->
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="/web-app-manifest-192x192.png" sizes="192x192" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="mask-icon" href="/favicon.svg" color="#21201c" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <!-- No icon: an empty data: URL stops browsers requesting /favicon.ico -->
+  <link rel="icon" href="data:," />
 
   <!-- Fonts: text= must list every character the page displays -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
